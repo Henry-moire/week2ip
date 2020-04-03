@@ -2,15 +2,37 @@ function numberOfDay() //Transform the user's birthday to a int
 {
 	//To store the user's birthday in three variables.
   alert("First, enter your birthday day, month then year:");
-  var day = parseInt(prompt("What date were you born?(e.g 1, 15, 31)"));
-  var month = parseInt(prompt("What month were you born?(e.g 1,7,12)"));
+  var day = parseFloat(prompt("What date were you born?(e.g 1, 15, 31)"));
+  var month = parseFloat(prompt("What month were you born?(e.g 1,7,12)"));
   var year = prompt("What year were you born?(e.g 1995, 1876, 2000)");
   //For subsequent calculations year needs to be split into two
-  var century = parseInt(year.slice(0,2));
-  var decadeYear = parseInt(year.slice(2,4));
-  
-  //To calculate which day of the week the user was born
-  var dayOfTheWeek = parseInt((((century / 4) - 2 * century - 1) + ((5 * decadeYear / 4) ) + ((26 * (month + 1) / 10)) + day) % 7);
+  var century = parseFloat(year.slice(0,2));
+  var decadeYear = parseFloat(year.slice(2,4));
+  if(month > 2)
+  {
+    month -= 2;
+  }
+  else
+  {
+    month += 10;
+    decadeYear -= 1;
+  }
+  alert(month);
+  alert(decadeYear);
+  //To calculate which day of the week the user was born ***Error given with some dates
+  var a = ((13 * month - 1) / 5);
+  var aInt = Math.trunc(a);
+  var b = (decadeYear / 4);
+  var bInt = Math.trunc(b);
+  var c = (century / 4);
+  var cInt = Math.trunc(c);
+  var dayOfTheWeek = (day + aInt + decadeYear + bInt + cInt - 2 * cInt) % 7;
+  /*alert(day);
+  alert(month);
+  alert(year);
+  alert(century);
+  alert(decadeYear);
+  alert(dayOfTheWeek);*/
   return dayOfTheWeek;
 }
 
