@@ -94,6 +94,37 @@ function akanName(day)
       akanName = "Kwasi";
     }
   }
+  if(gender == "female")
+  {
+    if(day == "Monday")
+    {
+      akanName = "Adwoa ";
+    }
+    else if(day == "Tuesday")
+    {
+      akanName = "Abenaa";
+    }
+    else if(day == "Wednesday")
+    {
+      akanName = "Akua";
+    }
+    else if(day == "Thursday")
+    {
+      akanName = "Yaa";
+    }
+    else if(day == "Friday")
+    {
+      akanName = "Afua";
+    }
+    else if(day == "Saturday")
+    {
+      akanName = "Ama";
+    }
+    else 
+    {
+      akanName = "Akosua";
+    }
+  }
   return akanName;
 }
 
