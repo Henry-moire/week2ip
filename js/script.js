@@ -63,35 +63,37 @@ function akanName(day)
 {
   var gender = prompt("What is your gender?");
   var akanName = "";
-  var dayOfBirth = day;
   if(gender == "male")
   {
-    switch(dayOfBirth)
+    if(day == "Monday")
     {
-        case Monday:
-          akanName = "Kwadwo";
-          break;
-        case Tuesday:
-          akanName = "Kwabena";
-          break;
-        case Wednesday:
-          akanName = "Kwaku";
-          break;
-        case Thursday:
-          akanName = "Yaw";
-          break;
-        case Friday:
-          akanName = "Kofi";
-          break;
-        case Saturday:
-          akanName = "Kwame";
-          break;
-        case Sunday:
-          akanName = "Kwasi";
-          break;
+      akanName = "Kwadwo";
+    }
+    else if(day == "Tuesday")
+    {
+      akanName = "Kwabena";
+    }
+    else if(day == "Wednesday")
+    {
+      akanName = "Kwaku";
+    }
+    else if(day == "Thursday")
+    {
+      akanName = "Yaw";
+    }
+    else if(day == "Friday")
+    {
+      akanName = "Kofi";
+    }
+    else if(day == "Saturday")
+    {
+      akanName = "Kwame";
+    }
+    else 
+    {
+      akanName = "Kwasi";
     }
   }
-  alert(akanName);
   return akanName;
 }
 
